@@ -1,14 +1,35 @@
-function App() { 
-  return (
-	  <>
-	    <h1 className="text-3xl font-bold">
-	      Hello world!
-	    </h1>
-      <h1 className="text-3xl font-poppins text-primary">Ini font poppins </h1>
-      <h1 className="text-3xl">Ini font body </h1>
-      <p>Ini font juga</p>
-	  </>
-  )
-}
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import SignInPage from "./pages/SignIn";
+import SignUpPage from "./pages/SignUp";
+import ErrorRoute from "./pages/errorRoute";
+import ForgotPasswordPage from "./pages/ForgotPassword";
 
-export default App
+const App = () => {
+  const myRouter = createBrowserRouter([
+    {
+      path: "/",
+      element: <div>Halaman Utama</div>,
+      errorElement: <ErrorRoute/>,
+    },
+    {
+      path: "/login",
+      element: <SignInPage/>,
+    },
+    {
+      path: "/register",
+      element: <SignUpPage/>,
+    },
+    {
+      path: "/forgot-password",
+      element: <ForgotPasswordPage/>,
+    },
+  ]);
+
+  return (
+    <>
+      <RouterProvider router={myRouter} />
+    </>
+  );
+};
+
+export default App;
