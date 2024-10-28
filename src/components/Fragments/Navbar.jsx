@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Icon } from "../Elements/Icon"; // Pastikan file dan komponen Icon ada
-import Logo from "../Elements/Logo";
+import Logo from "../Elements/Logo/Index";
 
 const Navbar = () => {
   const menus = [
