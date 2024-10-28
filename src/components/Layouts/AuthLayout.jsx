@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from '../Elements/Logo'
+import Logo from '../Elements/Logo/Index'
 import FormSignIn from '../Fragments/FormSignIn'
 import { Link } from "react-router-dom"
 
