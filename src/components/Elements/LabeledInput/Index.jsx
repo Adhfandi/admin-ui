@@ -1,7 +1,9 @@
-import Input from "./Input";
-import Label from "./Label";
+import React from 'react'
+import Label from './Label'
+import Input from './Input'
 
-const LabeledInputs = (props) => {
+
+const LabeledInput = (props) => {
   const { label, name, type, placeholder } = props;
 
   return (
@@ -12,4 +14,4 @@ const LabeledInputs = (props) => {
   );
 };
 
-export default LabeledInputs;
+export default LabeledInput;

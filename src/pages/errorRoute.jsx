@@ -1,5 +1,5 @@
 import { useRouteError } from "react-router-dom";
-import Logo from "../components/Elements/Logo/Index";
+import Logo from "../components/Elements/Logo";
 
 const ErrorRoute = () => {
   const error = useRouteError();

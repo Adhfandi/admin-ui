@@ -25,14 +25,13 @@ export default {
           "green": "#E73D1C",
           "red": "#4DAF6E"
         } 
-      }
+            },
+            fontFamily: {
+              
+              afacad : ['Afacad Flux'],
+            }
     },
-    fontFamily: {
-      body: ['Inter'],
-      poppins: ['Poppins'],
-    }
   },
   plugins: [],
-  
 }
 
