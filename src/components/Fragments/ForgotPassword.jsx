@@ -1,5 +1,5 @@
 import React from 'react'
-import LabeledInput from '../Elements/LabeledInput'
+import LabeledInput from '../Elements/LabeledInput/Index';
 import Button from '../Elements/Button';
 
 export const ForgotPassword = () => {
