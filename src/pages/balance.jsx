@@ -1,5 +1,5 @@
 import CardB from "../components/Elements/CardB";
-import MainLayout from "../components/Layouts/MainLayout";
+import MainLayout from "../components/Layout/MainLayout";
 
 const BalancePage = () => {
   return (

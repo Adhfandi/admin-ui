@@ -6,6 +6,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        body: ['Inter'],
+        poppins: ['Poppins'],
+      },
       colors: {
         primary: "#299D91",
         secondary: "#525256",
@@ -24,12 +28,8 @@ export default {
           "mainBg": "#F4F5F7",
           "green": "#E73D1C",
           "red": "#4DAF6E"
-        } 
-            },
-            fontFamily: {
-              
-              afacad : ['Afacad Flux'],
-            }
+        },
+      },
     },
   },
   plugins: [],
