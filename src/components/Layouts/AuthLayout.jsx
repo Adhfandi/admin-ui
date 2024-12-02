@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Logo from "../Elements/Logo";
+import Logo from "../Elements/Logo/Index";
 
 const AuthLayout = (props) => {
   const { children, type } = props;
