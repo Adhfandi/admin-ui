@@ -313,7 +313,7 @@ const ArrowRight = () => (
 </svg>
   </IconWrapper>
 );
-const ArrowUpRightIcon = () => (
+const ArrowUpRight = () => (
   <IconWrapper>
     <path
       d="M4.66669 11.3333L11.3334 4.66667"
