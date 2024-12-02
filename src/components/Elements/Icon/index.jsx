@@ -395,7 +395,7 @@ export const Icon = {
   ArrowDown: ArrowDown,
   ArrowUp: ArrowUp,
   ArrowRight: ArrowRight,
-  ArrowUpRight: ArrowUpRightIcon,
+  ArrowUpRight: ArrowUpRight,
   Award : AwardIcon,
   Edit : EditIcon,
   Target : TargetIcon,
