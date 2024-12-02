@@ -5,7 +5,7 @@ const Card = (props) => {
     <div className={`flex flex-col flex-1 mb-6 ${variant}`}>
       {title && (
         <>
-          {title.length === 1 ? (
+          {title.length == 1 ? (
             <div className="hidden md:block md:text-lg md:text-gray-02 md:mb-4">
               {title}
             </div>

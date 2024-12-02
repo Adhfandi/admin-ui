@@ -1,10 +1,12 @@
-import React from 'react'
-import ForgotPasswordLayout from '../components/Layout/ForgotPasswordLayout'
+import FormForgotPassword from "../components/Fragments/FormForgotPassword";
+import AuthLayout from "../components/Layouts/AuthLayout";
 
 const ForgotPasswordPage = () => {
-    return (
-      <ForgotPasswordLayout/>
-      )
-  }
-  
-  export default ForgotPasswordPage
+  return (
+    <AuthLayout type="forgot">
+      <FormForgotPassword />
+    </AuthLayout>
+  );
+};
+
+export default ForgotPasswordPage;
