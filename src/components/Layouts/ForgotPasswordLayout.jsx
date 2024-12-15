@@ -1,5 +1,5 @@
-import React from 'react'
-import Logo from '../Elements/Logo/Index'
+import React from 'react';
+import Logo from '../Elements/Logo/Index';
 import FormForgotPassword from '../Fragments/FormForgotPassword';
 import { Link } from 'react-router-dom';
 

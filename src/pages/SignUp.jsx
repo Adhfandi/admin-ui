@@ -1,5 +1,5 @@
 import FormSignUp from "../components/Fragments/FormSignUp";
-import AuthLayout from "../components/Layouts/AuthLayout";
+import AuthLayout from "../components/Layout/AuthLayout";
 
 const SignUpPage = () => {
   return (
