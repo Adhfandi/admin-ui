@@ -1,3 +1,8 @@
+import MainLayout from "../components/Layouts/MainLayout";
+import Card from "../components/Elements/Card";
+import CardExpenses from "../components/Elements/CardExpenses";
+import CardExpensesB from "../components/Elements/CardExpensesB";
+
 const ExpensesPage = () => {
   return (
     <MainLayout type="balance">

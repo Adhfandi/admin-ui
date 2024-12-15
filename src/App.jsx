@@ -5,7 +5,7 @@ import ErrorRoute from "./pages/errorRoute";
 import ForgotPasswordPage from "./pages/ForgotPassword";
 import DashboardPage from "./pages/dashboard";
 import BalancePage from "./pages/balance";
-import ExpensesPage from "./pages/expenses";
+import ExpensesPage from "./pages/expense";
 import GoalPage from "./pages/goal";
 
 const App = () => {
