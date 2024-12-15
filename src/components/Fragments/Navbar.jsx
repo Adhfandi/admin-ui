@@ -62,7 +62,7 @@ const Navbar = () => {
 
   return (
     <div className="bg-defaultBlack">
-    <nav className="bg-defaultBlack sticky top-0 text-special-bg2 sm:w-72 w-28 min-h-screen px-7 py-12 flex flex-col justify-between">
+    <nav className="sticky top-0 text-special-bg2 sm:w-72 w-28 min-h-screen px-7 py-12 flex flex-col justify-between">
       <div>
       <div className="flex justify-center mb-10">
           <Logo variant="text-primary text-sm sm:text-8x1" />
