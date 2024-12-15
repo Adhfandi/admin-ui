@@ -5,10 +5,8 @@ import ErrorRoute from "./pages/errorRoute";
 import ForgotPasswordPage from "./pages/ForgotPassword";
 import DashboardPage from "./pages/dashboard";
 import BalancePage from "./pages/balance";
+import ExpensesPage from "./pages/expenses";
 import GoalPage from "./pages/goal";
-import ExpensePage from "./pages/expense";
-// import { useState } from "react";
-// import "./App.css";
 
 const App = () => {
   const myRouter = createBrowserRouter([
@@ -39,7 +37,7 @@ const App = () => {
     },
     {
       path: "/expense",
-      element: <ExpensePage />,
+      element: <ExpensesPage />,
     },
   ]);
 
