@@ -8,7 +8,6 @@ const Header = () => {
   const {theme} = useContext(ThemeContext);
   const {name} = useContext(AuthContext);
 
-
   const date = new Date().toDateString().slice(4);
 
   return (
