@@ -6,7 +6,6 @@ import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import { ThemeContext } from '../../../context/themeContext';
 
-
 const Stepper = (props) => {
     const { desc } = props;
 
@@ -37,11 +36,15 @@ const Stepper = (props) => {
                 sx={{
                     maxWidth: "100%",
                     flexGrow: 1,
-                    "& .MuiMobileStepper-dot": { backgroundColor: "darkgray" },
-                    "& .MuiMobileStepper-dotActive": { backgroundColor: themeMode.color },
-                }}
+                    "& .MuiMobileStepper-dot" : {
+                        backgroundColor: "darkgray",
+                    },
+                    "& .MuiMobileStepper-dotActive" : {
+                        backgroundColor: themeMode.color,
+                    },
+                 }}
                 nextButton={
-                    <Button size="small" onClick={handleNext} sx={{ color: "black", fontWeight: "bold" }} disabled={activeStep === dataNum - 1}>
+                    <Button size="small" onClick={handleNext} sx={{ color: "black", fontWeight: "bold"}} disabled={activeStep === dataNum - 1}>
                         Next
                         {theme.direction === 'rtl' ? (
                             <KeyboardArrowLeft />
@@ -51,7 +54,7 @@ const Stepper = (props) => {
                     </Button>
                 }
                 backButton={
-                    <Button size="small" onClick={handleBack} sx={{ color: "black", fontWeight: "bold" }} disabled={activeStep === 0}>
+                    <Button size="small" onClick={handleBack} sx={{ color: "black", fontWeight: "bold"}} disabled={activeStep === 0}>
                         {theme.direction === 'rtl' ? (
                             <KeyboardArrowRight />
                         ) : (

@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react'
 import { BarChart } from '@mui/x-charts/BarChart';
 import { ThemeContext } from '../../../context/themeContext';
 

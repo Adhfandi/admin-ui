@@ -4,4 +4,4 @@ export const goals = {
     presentAmount: 12500,
     month: 5,
     year: 2023,
-};
+  };

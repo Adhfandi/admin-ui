@@ -1,15 +1,76 @@
+import { useEffect, useState } from "react";
 import { goals } from "../../../data/goals";
 import Card from "../../Elements/Card";
 import CompositionExample from "../../Elements/GaugeChart";
 import { Icon } from "../../Elements/Icon";
+import axios from "axios";
+import { TailSpin } from "react-loader-spinner";
 
 const CardGoal = () => {
-    const chartValue = goals.presentAmount * 100 / goals.targetAmount;
+  const [goals, setGoals] = useState({ presentAmount: 0, targetAmount: 0 });
+  const [isLoading, setIsLoading] = useState(true); // State untuk mengontrol loader
 
-    return (
-      <Card
-        title="Goals"
-        desc={
+  const value = (goals.presentAmount * 100) / goals.targetAmount;
+
+  const getData = async () => {
+    setIsLoading(true); // Set isLoading ke true sebelum fetching data
+    try {
+      const refreshToken = localStorage.getItem("refreshToken");
+
+      const response = await axios.get(
+        "https://jwt-auth-eight-neon.vercel.app/goals",
+        {
+          headers: {
+            Authorization: `Bearer ${refreshToken}`,
+          },
+        }
+      );
+
+      setGoals({
+        presentAmount: response.data.data[0].present_amount,
+        targetAmount: response.data.data[0].target_amount,
+      });
+    } catch (error) {
+      if (error.response) {
+        if (error.response.status === 401) {
+          setOpen(true);
+          setMsg({
+            severity: "error",
+            desc: "Session Has Expired. Please Login.",
+          });
+
+          setIsLoggedIn(false);
+          setName("");
+
+          localStorage.removeItem("refreshToken");
+          navigate("/login");
+        } else {
+          console.log(error.response);
+        }
+      }
+    } finally {
+      setIsLoading(false); // Set isLoading ke false setelah fetching data (baik sukses atau error)
+    }
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  // Komponen Loader
+  const Loader = () => (
+    <div className="flex justify-center items-center h-full">
+      <TailSpin color="#00BFFF" height={50} width={50} />
+    </div>
+  );
+
+  return (
+    <Card
+      title="Goals"
+      desc={
+        isLoading ? ( // Tampilkan Loader jika isLoading true
+          <Loader />
+        ) : (
           <div className="p-2">
             <div className="flex justify-between">
               <div className="flex">
@@ -51,7 +112,7 @@ const CardGoal = () => {
                 </div>
               </div>
               <div className="ms-4 text-center">
-                <CompositionExample desc={chartValue} />
+                <CompositionExample desc={value} />
                 <div className="flex justify-between">
                   <span className="text-gray-03">$0</span>
                   <span className="font-bold text-2xl">12K</span>
@@ -61,9 +122,10 @@ const CardGoal = () => {
               </div>
             </div>
           </div>
-        }
-      />
-    );
+        )
+      }
+    />
+  );
 };
-  
+
 export default CardGoal;

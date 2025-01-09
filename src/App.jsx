@@ -1,12 +1,12 @@
 import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
-import SignInPage from "./pages/SignIn";
-import SignUpPage from "./pages/SignUp";
+import SignInPage from "./pages/signIn";
+import SignUpPage from "./pages/signUp";
 import ErrorRoute from "./pages/errorRoute";
-import ForgotPasswordPage from "./pages/ForgotPassword";
+import ForgotPassword from "./pages/forgotPassword";
 import DashboardPage from "./pages/dashboard";
 import BalancePage from "./pages/balance";
-import ExpensesPage from "./pages/expense";
 import GoalPage from "./pages/goal";
+import ExpensePage from "./pages/expense";
 import { useContext } from "react";
 import { AuthContext } from "./context/authContext";
 
@@ -20,33 +20,38 @@ const App = () => {
   const myRouter = createBrowserRouter([
     {
       path: "/",
-      element: <RequireAuth><DashboardPage /></RequireAuth>,
-      errorElement: <ErrorRoute />,
+      element: <RequireAuth><DashboardPage/></RequireAuth>,
+      errorElement: <ErrorRoute/>,
+    },
+    {
+      path: "/error",
+      element: <ErrorRoute/>,
     },
     {
       path: "/login",
-      element: <SignInPage />,
+      element: <SignInPage/>,
     },
     {
       path: "/register",
-      element: <SignUpPage />,
+      element: <SignUpPage/>,
     },
     {
       path: "/forgot-password",
-      element: <ForgotPasswordPage />,
+      element: <ForgotPassword/>,
     },
     {
       path: "/balance",
-      element: <RequireAuth><BalancePage /></RequireAuth>,
-    },
-    {
-      path: "/goal",
-      element: <RequireAuth><GoalPage /></RequireAuth>,
+      element: <RequireAuth><BalancePage/></RequireAuth>,
     },
     {
       path: "/expense",
-      element: <RequireAuth><ExpensesPage /></RequireAuth>,
+      element: <RequireAuth><ExpensePage/></RequireAuth>,
     },
+    {
+      path: "/goal",
+      element: <RequireAuth><GoalPage/></RequireAuth>,
+    }
+
   ]);
 
   return (

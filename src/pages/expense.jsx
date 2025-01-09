@@ -1,33 +1,45 @@
-import MainLayout from "../components/Layouts/MainLayout";
+import React from 'react'
 import Card from "../components/Elements/Card";
-import CardExpenses from "../components/Elements/CardExpenses";
-import CardExpensesB from "../components/Elements/CardExpensesB";
+import MainLayout from "../components/Layouts/MainLayout";
 
-const ExpensesPage = () => {
+const ExpensePage = () => {
   return (
-    <MainLayout type="balance">
+    <MainLayout type="expense">
       {/* top content start*/}
-      <div className="mb-8">
-        <Card
-          title="Expenses Comparison"
-          variant="md:col-span3 text-primary"
-          desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni neque quam alias enim ullam deserunt ducimus consequatur cumque hic voluptatem totam ab quibusdam facilis distinctio ratione, sequi vel porro eum."
-        />
-      </div>
-      {/* top content end*/}
-      <div className="md:grid md:grid-cols-3 md:gap-6">
-      <Card title="Expenses Breakdown" />
-        <Card title="&nbsp;" 
-         desc="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores perferendis velit incidunt fugiat exercitationem asperiores eveniet aliquid voluptas aperiam harum dolorem quis eaque, odio minus quo accusantium officiis qui veniam?"
-        /> 
+      <div className="md:grid md:grid-cols-1 md:gap-x-6">
+      <Card 
+           title="Expenses Comparison"
+           variant="md:col-span-3 text-primary"
+           desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni neque quam alias enim ullam deserunt ducimus consequatur cumque hic voluptatem totam ab quibusdam facilis distinctio ratione, sequi vel porro eum." 
+           />
+        
+        </div>
+
+      <div className="md:grid md:grid-cols-3 md:gap-x-6">
+        <Card 
+           title="Expenses Breakdown"
+           desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni neque quam alias enim ullam deserunt ducimus consequatur cumque hic voluptatem totam ab quibusdam facilis distinctio ratione, sequi vel porro eum." 
+           />
         <Card title="&nbsp;" />
-        <Card />
-        <Card />
-        <Card desc="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores perferendis velit incidunt fugiat exercitationem asperiores eveniet aliquid voluptas aperiam harum dolorem quis eaque, odio minus quo accusantium officiis qui veniam?"/>
+        <Card title="&nbsp;" />
+      </div>
+
+           {/* top content end */}
+           {/* bottom content start */}
+      <div className="md:grid md:grid-cols-3 md:gap-x-6">
+        <Card 
+           title="Expenses Breakdown"
+
+           desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni neque quam alias enim ullam deserunt ducimus consequatur cumque hic voluptatem totam ab quibusdam facilis distinctio ratione, sequi vel porro eum." 
+           />
+        <Card 
+           desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni neque quam alias enim ullam deserunt ducimus consequatur cumque hic voluptatem totam ab quibusdam facilis distinctio ratione, sequi vel porro eum." 
+           />
+      <Card />
       </div>
       {/* bottom content end*/}
     </MainLayout>
-  );
-};
+  )
+}
 
-export default ExpensesPage;
+export default ExpensePage
